@@ -244,8 +244,9 @@ clean:
 lex.cligen_parse.c : $(srcdir)/cligen_parse.l cligen_parse.tab.h
 	$(LEX) -Pcligen_parse $(srcdir)/cligen_parse.l # -d is debug 
 
-cligen_parse.tab.h: $(srcdir)/cligen_parse.y
-	$(YACC) -l -d -b cligen_parse -p cligen_parse $(srcdir)/cligen_parse.y # -t is debug
+cligen_parse.tab.h:  # $(srcdir)/cligen_parse.y
+	# $(YACC) -l -d -b cligen_parse -p cligen_parse $(srcdir)/cligen_parse.y # -t is debug
+	echo "For petalinux, just use static file 'cligen_parse_tab.h' instead of generating with yacc"
 
 cligen_parse.tab.c: cligen_parse.tab.h
 

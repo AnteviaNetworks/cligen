@@ -195,7 +195,7 @@ build.c:
 #	echo "const char CLIGEN_VERSION[64]=\"$(CLIGEN_VERSION)\""\; >> build.c;
 
 # install-bin install-include
-install: install-lib install-include
+install: install-lib # install-include
 
 install-bin: $(APPS)
 	$(INSTALL) -m 0755 -d $(DESTDIR)$(bindir)

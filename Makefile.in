@@ -233,7 +233,8 @@ YACCOBJS := lex.cligen_parse.o cligen_parse.tab.o
 clean:  
 	rm -f $(APPS) $(OBJS) $(YACCOBJS) 
 	rm -f $(MYLIBSTATIC) $(MYLIBDYNAMIC) $(MYLIBSO) $(MYLIBLINK) 
-	rm -f *.tab.c *.tab.h *.tab.o 
+	# rm -f *.tab.c *.tab.h *.tab.o 
+	rm -f *.tab.o
 	rm -f lex.*.c lex.*.o *.core cligen
 	rm -f *.gcda *.gcno *.gcov # coverage
 

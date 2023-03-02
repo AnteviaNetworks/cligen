@@ -1,7 +1,7 @@
 # Generated files
 doc
 
-cligen_parse.tab.c
+
 
 lex.cligen_parse.c
 cligen_config.h

@@ -68,11 +68,12 @@ INSTALL_DATA    = @INSTALL@
 INSTALL_PROGRAM	= @INSTALL@
 LN_S            = @LN_S@
 
-ifeq ($(HOST_VENDOR),apple)
+# don't perform -s to strip for petalinux
+#ifeq ($(HOST_VENDOR),apple)
 INSTALLFLAGS =
-else
-INSTALLFLAGS = @INSTALLFLAGS@
-endif
+#else
+#INSTALLFLAGS = @INSTALLFLAGS@
+#endif
 
 CLIGEN_VERSION = @CLIGEN_VERSION@
 CLIGEN_MAJOR   = @CLIGEN_VERSION_MAJOR@

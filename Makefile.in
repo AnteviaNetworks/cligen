@@ -216,8 +216,8 @@ endif
 # Installs include files in subdir called 'cligen'. Applications should include
 # <cligen/cligen.h>
 install-include: $(SRCDIR_INCS)
-	# install -m 0755 -d $(DESTDIR)$(includedir)
-	# $(INSTALL_DATA) $(SRCDIR_INCS) $(DESTDIR)$(includedir)
+	install -m 0755 -d $(DESTDIR)$(includedir)
+	$(INSTALL_DATA) $(SRCDIR_INCS) $(DESTDIR)$(includedir)
 
 uninstall: 
 	rm -f $(DESTDIR)$(libdir)/$(MYLIBDYNAMIC)
